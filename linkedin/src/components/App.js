@@ -13,10 +13,14 @@ const App = () => {
   const [email, setEmail] = useState();
   const [image, setImage] = useState();
 
-  const [gender, setGender] = useState();
+  const [gender, setGender] = useState({  });
 
-  const handleGender = (y) => {
-    return setGender(y);
+  const handleGender = (genderValue, nameValue) => {
+    // Para declarar el nombre de la propiedad ("nameValue")
+    // de nuestro objeto (dentro de useState de gender), 
+    // sustituimos las comillas ("namevalue") por corchetes ([nameValue])
+    // ---> esto es cosa de los señoros de JS <---
+    return setGender({...gender, [nameValue] : genderValue });
   };
 
   return (

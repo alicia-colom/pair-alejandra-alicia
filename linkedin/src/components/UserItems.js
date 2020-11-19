@@ -5,7 +5,9 @@ const UserItems = (props) => {
 
   const handleChange = (event) => {
     const genderValue = event.target.value;
-    return props.handleGender2(genderValue);
+    const nameValue = props.datitos.name;
+
+    return props.handleGender2(genderValue, nameValue);
   };
 
   return (
